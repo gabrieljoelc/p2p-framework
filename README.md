@@ -36,6 +36,20 @@ claude
 
 3. Start working: "work on [ticket-id]"
 
+## Agent Architecture
+
+The P2P agent uses modular task files for efficiency:
+
+### Main Orchestrator
+- `agent.md` - Lightweight router that loads only needed task files
+
+### Task Files
+- `tasks/setup.md` - Repository detection and CLAUDE.md creation
+- `tasks/context.md` - Transient context file management  
+- `tasks/implement.md` - Test-driven ticket implementation
+- `tasks/pr-generation.md` - PR description and commit generation
+
+
 ## What This Does
 
 - Provides test-driven development patterns
@@ -43,10 +57,12 @@ claude
 - Auto-creates `CLAUDE.md` files in each repository
 - Guides implementation from ticket → code → PR
 
-## Files
+## Usage Examples
 
-- `core/p2p-workflow.md` - The complete P2P automation patterns
-- `core/p2p-agent.md` - Unified P2P agent (handles setup + implementation)
-- `PROGRESS.md` - Development progress and roadmap
+```
+Claude startup → loads tasks/setup.md → creates CLAUDE.md files
+"work on READY-123" → loads tasks/context.md + tasks/implement.md
+"generate pr" → loads tasks/pr-generation.md
+```
 
 That's it. No installation scripts, just markdown and Claude.

@@ -29,18 +29,26 @@
 
 #### Immediate (Optional)
 - [ ] **Test the Framework**: Try P2P workflow on a Ready Platform ticket
-- [ ] **Create generator script** (only if needed): Merge existing CLAUDE.md with P2P patterns
-- [ ] **Simple integration**: Manually add P2P section to existing CLAUDE.md
+- [ ] **Smoke test modular architecture**: Verify agent loads correct task files
+- [ ] **Test auto-setup**: Verify CLAUDE.md creation in repos
+
+#### Phase 2: Automation Hardening
+- [ ] **Deterministic feedback loops**: Teach framework to add pre-commit hooks, automated tests, linters as it works
+- [ ] **Self-improving automation**: Framework learns to reduce manual intervention over time
+- [ ] **Quality gates**: Automatically set up CI/CD checks that prevent broken PRs
+
+#### Phase 3: AI CLI Agnostic
+- [ ] **Multi-AI support**: Make framework work with Gemini, GPT-4, other AIs
+- [ ] **AI orchestration**: Coordinate multiple AIs for different tasks (one for tests, one for implementation, etc.)
+- [ ] **Provider abstraction**: Common interface regardless of underlying AI
 
 #### When You Get New Clients
-- [ ] **Create new adapter**: `adapters/imgix.md` with Python/monorepo patterns
-- [ ] **Generate CLAUDE.md files** for new client repos
-- [ ] **Test cross-client patterns**: Validate framework reusability
+- [ ] **Test cross-client patterns**: Validate framework reusability with imgix
+- [ ] **Pattern library expansion**: Document successful P2P workflows across different tech stacks
 
 #### Long-term Improvements  
-- [ ] **Pattern library expansion**: Document successful P2P workflows
-- [ ] **Automation phase progression**: Phase 1 → Phase 2 → Phase 3
 - [ ] **Tool integrations**: JIRA/Linear webhook triggers
+- [ ] **Metrics collection**: Track P2P success rates and automation progression
 
 ## Framework Architecture Achieved
 
