@@ -4,35 +4,43 @@ Generic PRD-to-PR automation patterns for Claude Code.
 
 ## Installation
 
-Clone this framework **INTO your partner organization's root directory**:
+Clone this framework **INTO your organization's root directory**:
 ```bash
-# Navigate to your partner/client root (where all their repos live)
-cd ~/dev/partner-org  # Could be any client: imgix, ready-platform, etc.
+# Navigate to your organization root (where all repos live)
+cd ~/dev/org  # Could be any organization
 
-# Clone the framework and create root CLAUDE.md
-git clone git@github.com:gabrieljoelc/p2p-framework.git && touch CLAUDE.md
+# Clone the framework and create root CLAUDE.md with P2P agent activation
+git clone git@github.com:gabrieljoelc/p2p-framework.git && echo "# Organization Root
+
+## P2P Agent
+**Source**: ./p2p-framework/agent.md
+
+When user mentions tickets, automatically use the P2P agent:
+- \"work on [ticket-id]\" → Load tasks/context.md + tasks/implement.md  
+- \"set up p2p\" → Load tasks/setup.md
+- \"generate pr\" → Load tasks/pr-generation.md" > CLAUDE.md
 
 # Your structure should look like:
-# partner-org/
+# org/
 # ├── p2p-framework/      # This framework
 # ├── CLAUDE.md           # Root CLAUDE.md (triggers P2P)
-# ├── backend-repo/       # Partner's backend repository
-# ├── frontend-repo/      # Partner's frontend repository  
-# └── mobile-repo/        # Partner's mobile repository
+# ├── backend-repo/       # Organization's backend repository
+# ├── frontend-repo/      # Organization's frontend repository  
+# └── mobile-repo/        # Organization's mobile repository
 ```
 
 ## Quick Start
 
-1. Start Claude Code from the partner root:
+1. Start Claude Code from the org root:
 ```bash
-cd ~/dev/partner-org
+cd ~/dev/org
 claude
 ```
 
-2. Claude will automatically:
-   - Detect the P2P framework
-   - Create `CLAUDE.md` files in repos that need them
+2. The P2P agent will:
+   - Detect repositories and create `CLAUDE.md` files
    - Auto-detect tech stack and commands
+   - Activate when you mention tickets
 
 3. Start working: "work on [ticket-id]"
 

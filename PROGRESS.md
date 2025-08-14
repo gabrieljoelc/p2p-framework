@@ -33,6 +33,7 @@
 - [ ] **Test auto-setup**: Verify CLAUDE.md creation in repos
 
 #### Phase 2: Automation Hardening
+- [ ] **Ticket system integration**: Auto-fetch from Linear, JIRA, GitHub Issues instead of manual copy-paste
 - [ ] **Deterministic feedback loops**: Teach framework to add pre-commit hooks, automated tests, linters as it works
 - [ ] **Self-improving automation**: Framework learns to reduce manual intervention over time
 - [ ] **Quality gates**: Automatically set up CI/CD checks that prevent broken PRs
