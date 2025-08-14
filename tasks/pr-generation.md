@@ -46,7 +46,7 @@ at 50% completion to encourage profile completion.
 - Integrate push notification system
 - Add comprehensive test coverage
 
-Closes #READY-123
+Closes #TICKET-123
 
 🤖 Generated with [Claude Code](https://claude.ai/code)
 

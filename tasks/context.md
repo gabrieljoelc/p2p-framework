@@ -14,7 +14,7 @@ ls /tmp/p2p-context-*.md
 
 ### Extract Ticket ID
 From user input or branch name:
-- "work on READY-123" → `READY-123`
+- "work on TICKET-123" → `TICKET-123`
 - Branch: `ENG-456-user-auth` → `ENG-456`
 - Continue: Load most recent context file
 

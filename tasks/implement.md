@@ -9,7 +9,7 @@ Load `tasks/context.md` first to establish ticket state.
 
 ### 1. Extract Ticket Information
 From user request or existing context:
-- Ticket ID (e.g., READY-123, ENG-456)
+- Ticket ID (e.g., TICKET-123, ENG-456)
 - Acceptance criteria
 - Repository to work in
 

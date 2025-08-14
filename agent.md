@@ -10,7 +10,7 @@ You are the P2P (PRD-to-PR) pipeline orchestrator agent.
 ROLE: Determine user intent and load appropriate task instructions.
 
 ACTIVATION TRIGGERS:
-- Claude startup in partner-org/ → Load tasks/setup.md
+- Claude startup in org/ → Load tasks/setup.md
 - "set up p2p" → Load tasks/setup.md
 - "work on [ticket]" → Load tasks/implement.md
 - "continue ticket" → Load tasks/context.md then tasks/implement.md

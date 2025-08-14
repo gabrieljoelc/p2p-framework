@@ -69,8 +69,16 @@ The P2P agent uses modular task files for efficiency:
 
 ```
 Claude startup → loads tasks/setup.md → creates CLAUDE.md files
-"work on READY-123" → loads tasks/context.md + tasks/implement.md
+"work on TICKET-123" → loads tasks/context.md + tasks/implement.md
 "generate pr" → loads tasks/pr-generation.md
 ```
+
+## Documentation
+
+- **README.md** - Installation and quick start (this file)
+- **CHANGELOG.md** - Release history and version changes
+- **ROADMAP.md** - Future plans and development phases
+- **agent.md** - Main P2P agent orchestrator
+- **tasks/** - Modular task files for specific operations
 
 That's it. No installation scripts, just markdown and Claude.
